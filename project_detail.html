@@ -22,8 +22,8 @@
 <body>
     <div id="wrapper">
         <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav metismenu" id="side-menu">
+            <div class="sidebar-collapse">                
+                <ul class="nav metismenu" id="side-menu">                    
                     <li class="nav-header">
                         <div class="dropdown profile-element">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -36,20 +36,19 @@
                         </div>
                     </li>
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span
-                                class="nav-label">Dashboards</span></a>
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-edit"></i> <span class="nav-label">Projects</span><span
-                                class="fa arrow"></span></a>
+                            class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="project_create.html">Create Project</a></li>
-                            <li><a href="project_list.html">List Projects</a></li>
+                            <li><a href="">Create Project</a></li>
+                            <li><a href="">List Projects</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-flask"></i> <span class="nav-label">Manage</span><span
-                                class="fa arrow"></span></a>
+                            class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="">Create Line Items</a></li>
                             <li><a href="">Budget</a></li>
@@ -63,7 +62,7 @@
                     </li>
                     <li>
                         <a href=""><i class="fa fa-file"></i> <span class="nav-label">Accounts Receivable</span><span
-                                class="fa arrow"></span></a>
+                            class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="">Create Requisition</a></li>
                             <li><a href="">Open Requisition</a></li>
@@ -71,7 +70,7 @@
                     </li>
                     <li>
                         <a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Accounts Payable</span><span
-                                class="fa arrow"></span></a>
+                            class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="">Create Inv</a></li>
                             <li><a href="">Open Inv</a></li>
@@ -79,7 +78,7 @@
                     </li>
                     <li>
                         <a href=""><i class="fa fa-credit-card"></i> <span class="nav-label">Payroll</span><span
-                                class="fa arrow"></span></a>
+                            class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="">Create</a></li>
                             <li><a href="">Payroll History</a></li>
@@ -87,7 +86,7 @@
                     </li>
                     <li>
                         <a href=""><i class="fa fa-pie-chart"></i> <span class="nav-label">Reports</span><span
-                                class="fa arrow"></span></a>
+                            class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="">Project Reports</a></li>
                             <li><a href="">Company Reports</a></li>
@@ -95,7 +94,7 @@
                     </li>
                     <li>
                         <a href=""><i class="fa fa-globe"></i> <span class="nav-label">Administration</span><span
-                                class="fa arrow"></span></a>
+                            class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="">Create User</a></li>
                             <li><a href="">Manage user</a></li>
@@ -179,13 +178,16 @@
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-sm-12">
-                    <h2>List Of All Projects</h2>
+                    <h2>Project Detail For {{ Project Name }}</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="index.html">Dashboard</a>
                         </li>
+                        <li class="breadcrumb-item">
+                            <a href="project_list.html">Project List</a>
+                        </li>
                         <li class="breadcrumb-item active">
-                            <strong>Project List</strong>
+                            <strong>Detail</strong>
                         </li>
                     </ol>
                 </div>
@@ -193,11 +195,107 @@
 
             <div class="wrapper wrapper-content">
                 <div class="row">
-
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="ibox ">
                             <div class="ibox-title">
-                                <h5>List Of Ongoing Projects</h5>
+                                <h5>Project Information</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <p><Strong>Project Number</Strong>: 0123</p>
+                                <p><Strong>Project Name</Strong>: XYZ</p>
+
+                                <address>
+                                    <strong>Project Address</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                </address>
+                                <p><Strong>Project Budget</Strong>: $$$$$$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Client Info</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">                                
+                                <p><Strong>Cleint Name</Strong>: ABC</p>
+
+                                <address>
+                                    <strong>Address</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                </address>
+                                <p><Strong>Contact Name</Strong>: QYTT</p>
+                                <p><Strong>Contact Number</Strong>: 01234</p>
+                                <p><Strong>PM Name</Strong>: bnm</p>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>PO Lists</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content no-padding">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="badge badge-primary">16</span>
+                                        But I must explain to
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <span class="badge badge-info">12</span>
+                                        How all this mistaken
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge badge-danger">10</span>
+                                        But because occasionally
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge badge-success">10</span>
+                                        But who has any right
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge badge-warning">7</span>
+                                        On the other hand
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Line Items List</h5>
                                 <div class="ibox-tools">
                                     <a class="collapse-link">
                                         <i class="fa fa-chevron-up"></i>
@@ -215,13 +313,9 @@
                                                 <tr>
 
                                                     <th>#</th>
-                                                    <th>Project </th>
-                                                    <th>Name </th>
-                                                    <th>Phone </th>
-                                                    <th>Company </th>
-                                                    <th>Completed </th>
-                                                    <th>Task</th>
-                                                    <th>Date</th>
+                                                    <th>Line Item </th>
+                                                    <th>Cost Code </th>
+                                                    <th>Budget </th>                                                    
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -231,170 +325,46 @@
                                                     <td>Project <small>This is example of project</small></td>
                                                     <td>Patrick Smith</td>
                                                     <td>0800 051213</td>
-                                                    <td>Inceptos Hymenaeos Ltd</td>
-                                                    <td><span class="pie">0.52/1.561</span></td>
-                                                    <td>20%</td>
-                                                    <td>Jul 14, 2013</td>
                                                     <td><a href="project_detail.html"><i
                                                                 class="fa fa-external-link text-navy"></i> Detail</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Alpha project</td>
-                                                    <td>Alice Jackson</td>
-                                                    <td>0500 780909</td>
-                                                    <td>Nec Euismod In Company</td>
-                                                    <td><span class="pie">6,9</span></td>
-                                                    <td>40%</td>
-                                                    <td>Jul 16, 2013</td>
+                                                    <td>Project <small>This is example of project</small></td>
+                                                    <td>Patrick Smith</td>
+                                                    <td>0800 051213</td>
                                                     <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
+                                                                class="fa fa-external-link text-navy"></i> Detail</a>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Betha project</td>
-                                                    <td>John Smith</td>
-                                                    <td>0800 1111</td>
-                                                    <td>Erat Volutpat</td>
-                                                    <td><span class="pie">3,1</span></td>
-                                                    <td>75%</td>
-                                                    <td>Jul 18, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Gamma project</td>
-                                                    <td>Anna Jordan</td>
-                                                    <td>(016977) 0648</td>
-                                                    <td>Tellus Ltd</td>
-                                                    <td><span class="pie">4,9</span></td>
-                                                    <td>18%</td>
-                                                    <td>Jul 22, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Alpha project</td>
-                                                    <td>Alice Jackson</td>
-                                                    <td>0500 780909</td>
-                                                    <td>Nec Euismod In Company</td>
-                                                    <td><span class="pie">6,9</span></td>
-                                                    <td>40%</td>
-                                                    <td>Jul 16, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
                                                     <td>Project <small>This is example of project</small></td>
                                                     <td>Patrick Smith</td>
                                                     <td>0800 051213</td>
-                                                    <td>Inceptos Hymenaeos Ltd</td>
-                                                    <td><span class="pie">0.52/1.561</span></td>
-                                                    <td>20%</td>
-                                                    <td>Jul 14, 2013</td>
                                                     <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
+                                                                class="fa fa-external-link text-navy"></i> Detail</a>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Gamma project</td>
-                                                    <td>Anna Jordan</td>
-                                                    <td>(016977) 0648</td>
-                                                    <td>Tellus Ltd</td>
-                                                    <td><span class="pie">4,9</span></td>
-                                                    <td>18%</td>
-                                                    <td>Jul 22, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
                                                     <td>Project <small>This is example of project</small></td>
                                                     <td>Patrick Smith</td>
                                                     <td>0800 051213</td>
-                                                    <td>Inceptos Hymenaeos Ltd</td>
-                                                    <td><span class="pie">0.52/1.561</span></td>
-                                                    <td>20%</td>
-                                                    <td>Jul 14, 2013</td>
                                                     <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
+                                                                class="fa fa-external-link text-navy"></i> Detail</a>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Alpha project</td>
-                                                    <td>Alice Jackson</td>
-                                                    <td>0500 780909</td>
-                                                    <td>Nec Euismod In Company</td>
-                                                    <td><span class="pie">6,9</span></td>
-                                                    <td>40%</td>
-                                                    <td>Jul 16, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Betha project</td>
-                                                    <td>John Smith</td>
-                                                    <td>0800 1111</td>
-                                                    <td>Erat Volutpat</td>
-                                                    <td><span class="pie">3,1</span></td>
-                                                    <td>75%</td>
-                                                    <td>Jul 18, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Gamma project</td>
-                                                    <td>Anna Jordan</td>
-                                                    <td>(016977) 0648</td>
-                                                    <td>Tellus Ltd</td>
-                                                    <td><span class="pie">4,9</span></td>
-                                                    <td>18%</td>
-                                                    <td>Jul 22, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Alpha project</td>
-                                                    <td>Alice Jackson</td>
-                                                    <td>0500 780909</td>
-                                                    <td>Nec Euismod In Company</td>
-                                                    <td><span class="pie">6,9</span></td>
-                                                    <td>40%</td>
-                                                    <td>Jul 16, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
                                                     <td>Project <small>This is example of project</small></td>
                                                     <td>Patrick Smith</td>
                                                     <td>0800 051213</td>
-                                                    <td>Inceptos Hymenaeos Ltd</td>
-                                                    <td><span class="pie">0.52/1.561</span></td>
-                                                    <td>20%</td>
-                                                    <td>Jul 14, 2013</td>
                                                     <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Gamma project</td>
-                                                    <td>Anna Jordan</td>
-                                                    <td>(016977) 0648</td>
-                                                    <td>Tellus Ltd</td>
-                                                    <td><span class="pie">4,9</span></td>
-                                                    <td>18%</td>
-                                                    <td>Jul 22, 2013</td>
-                                                    <td><a href="project_detail.html"><i
-                                                        class="fa fa-external-link text-navy"></i> Detail</a>
-                                                </tr>
+                                                                class="fa fa-external-link text-navy"></i> Detail</a>
+                                                    </td>
+                                                </tr>                                            
                                             </tbody>
                                         </table>
                                     </div>
@@ -402,10 +372,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
 
 

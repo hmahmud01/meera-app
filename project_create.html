@@ -10,7 +10,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     <!-- Morris -->
     <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
 
@@ -177,26 +177,113 @@
                 </nav>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-sm-4">
-                    <h2>This is main title</h2>
+                <div class="col-sm-12">
+                    <h2>Add A Project</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="index.html">This is</a>
+                            <a href="index.html">Dashboard</a>
                         </li>
                         <li class="breadcrumb-item active">
-                            <strong>Breadcrumb</strong>
+                            <strong>Create Project</strong>
                         </li>
                     </ol>
                 </div>
-                <div class="col-sm-8">
+                <!-- <div class="col-sm-8">
                     <div class="title-action">
                         <a href="" class="btn btn-primary">This is action area</a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="wrapper wrapper-content">
-
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Project Add Form <small>Fill Up the form with proper Information.</small></h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <form method="get">
+                                    <h3>Project Information</h3>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Project Number</label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Project Number1" class="form-control"></div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Project Name</label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Project Name" class="form-control"></div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Project Address</label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Project Address" class="form-control"></div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <h3>Client Information</h3>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Client Name</label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Client Name" class="form-control"></div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Address</label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Address" class="form-control"></div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Contact Name</label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Contact Name" class="form-control"></div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Contact Number</label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Contact Number" class="form-control"></div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">PM Name</label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="PM Name" class="form-control"></div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group row" id="data_1"><label class="col-sm-2 col-form-label">Bid Date</label>    
+                                        <div class="input-group date col-sm-10">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row" id="data_1"><label class="col-sm-2 col-form-label">Award Date</label>    
+                                        <div class="input-group date col-sm-10">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row" id="data_1"><label class="col-sm-2 col-form-label">NTP Date</label>    
+                                        <div class="input-group date col-sm-10">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Contract Duration (Days) </label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Contract Duration (Days) " class="form-control"></div>
+                                    </div>
+                                    <div class="form-group row" id="data_1"><label class="col-sm-2 col-form-label">Start Date</label>    
+                                        <div class="input-group date col-sm-10">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row" id="data_1"><label class="col-sm-2 col-form-label">Date of Completion</label>    
+                                        <div class="input-group date col-sm-10">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Contract Amount </label>    
+                                        <div class="col-sm-10"><input type="text" placeholder="Contract Amount" class="form-control"></div>
+                                    </div>
+                                    
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <button class="btn btn-white btn-sm" type="submit">Cancel</button>
+                                            <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -250,10 +337,36 @@
 
     <!-- Sparkline demo data  -->
     <script src="js/demo/sparkline-demo.js"></script>
-
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
     <!-- ChartJS-->
     <script src="js/plugins/chartJs/Chart.min.js"></script>
 
+        <!-- iCheck -->
+        <script src="js/plugins/iCheck/icheck.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var mem = $('#data_1 .input-group.date').datepicker({
+                    todayBtn: "linked",
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    calendarWeeks: true,
+                    autoclose: true
+                });
+
+                var yearsAgo = new Date();
+                yearsAgo.setFullYear(yearsAgo.getFullYear() - 20);
+
+                $('#selector').datepicker('setDate', yearsAgo );
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+
+                
+            });
+        </script>
+        <!-- Data picker -->
+   
 
 </body>
 
