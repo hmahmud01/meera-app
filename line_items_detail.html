@@ -51,10 +51,10 @@
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="line_items.html">Create Line Items</a></li>
-                            <li><a href="">Budget</a></li>
-                            <li><a href="">SOV</a></li>
-                            <li><a href="">PO</a></li>
-                            <li><a href="">RFI</a></li>
+                            <li><a href="budget.html">Budget</a></li>
+                            <li><a href="sov.html">SOV</a></li>
+                            <li><a href="po.html">PO</a></li>
+                            <li><a href="rfi.html">RFI</a></li>
                             <li><a href="">Change Order</a></li>
                             <li><a href="">Submittal</a></li>
                             <li><a href="">Document</a></li>
@@ -177,73 +177,28 @@
                 </nav>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-sm-4">
-                    <h2>Line Items</h2>
+                <div class="col-sm-12">
+                    <h2>Item Detail For {{ Cost Code }}</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="index.html">Dashboard</a>
                         </li>
+                        <li class="breadcrumb-item">
+                            <a href="line_items.html">Line Item List</a>
+                        </li>
                         <li class="breadcrumb-item active">
-                            <strong>Line Items</strong>
+                            <strong>Detail</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-sm-8">
-                    <div class="title-action">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_line_items">
-                            Add Line Items
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal inmodal fade" id="add_line_items" tabindex="-1" role="dialog"  aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-
-
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title">Add A line Items</h4>
-                            <small class="font-bold">For a Project.</small>
-                        </div>
-                        <form method="get">
-                            <div class="modal-body">
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Select Project</label>
-        
-                                    <div class="col-sm-10">
-                                        <select class="form-control m-b" name="account">
-                                            <option>option 1</option>
-                                            <option>option 2</option>
-                                            <option>option 3</option>
-                                            <option>option 4</option>
-                                        </select>
-        
-                                    </div>
-                                </div>
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Cost Code</label>    
-                                    <div class="col-sm-10"><input type="text" placeholder="Cost Code" class="form-control"></div>
-                                </div>
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Item Description</label>    
-                                    <div class="col-sm-10"><input type="text" placeholder="Item Description" class="form-control"></div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
 
             <div class="wrapper wrapper-content">
-
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="ibox ">
                             <div class="ibox-title">
-                                <h5>Line Items List</h5>
+                                <h5>Project Information</h5>
                                 <div class="ibox-tools">
                                     <a class="collapse-link">
                                         <i class="fa fa-chevron-up"></i>
@@ -254,78 +209,114 @@
                                 </div>
                             </div>
                             <div class="ibox-content">
-                                <div class="row">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Cost Code </th>
-                                                    <th>Item Description</th>                                                    
-                                                    <th>Quantity</th>
-                                                    <th>Unit</th>
-                                                    <th>Labor</th>                                                    
-                                                    <th>Material</th>
-                                                    <th>Equipement</th>                                                    
-                                                    <th>Budget </th>   
-                                                    <th>Project Name</th>                                                 
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>GC1</td>
-                                                    <td>Project Manager</td>                                                    
-                                                    <td>10</td>
-                                                    <td>Months</td>
-                                                    <td>$1,50,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$1,50,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td><a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>GC2</td>
-                                                    <td>Project Supervision</td>                                                    
-                                                    <td>8</td>
-                                                    <td>Months</td>
-                                                    <td>$85,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$85,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td><a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>GC3</td>
-                                                    <td>Site Safety</td>                                                    
-                                                    <td>8</td>
-                                                    <td>Months</td>
-                                                    <td>$85,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$85,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td><a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>                                        
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <p><Strong>Project Number</Strong>: 0123</p>
+                                <p><Strong>Project Name</Strong>: XYZ</p>
+
+                                <address>
+                                    <strong>Project Address</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                </address>
+                                <p><Strong>Project Budget</Strong>: $$$$$$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Client Info</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
                                 </div>
+                            </div>
+                            <div class="ibox-content">                                
+                                <p><Strong>Cleint Name</Strong>: ABC</p>
+
+                                <address>
+                                    <strong>Address</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                </address>
+                                <p><Strong>Contact Name</Strong>: QYTT</p>
+                                <p><Strong>Contact Number</Strong>: 01234</p>
+                                <p><Strong>PM Name</Strong>: bnm</p>
+        
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>PO Lists</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content no-padding">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="badge badge-primary">16</span>
+                                        But I must explain to
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <span class="badge badge-info">12</span>
+                                        How all this mistaken
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge badge-danger">10</span>
+                                        But because occasionally
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge badge-success">10</span>
+                                        But who has any right
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge badge-warning">7</span>
+                                        On the other hand
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Line Items Detail</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <p><Strong>Line Item Description</Strong>: ABC</p>
+                                <p><Strong>Cost Code</Strong>: ABC</p>                                
+
+                                <p><Strong>Contact Name</Strong>: QYTT</p>
+                                <p><Strong>Contact Number</Strong>: 01234</p>
+                                <p><Strong>PM Name</Strong>: bnm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
