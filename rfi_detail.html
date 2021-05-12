@@ -16,6 +16,7 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 
 </head>
 
@@ -51,10 +52,10 @@
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="line_items.html">Create Line Items</a></li>
-                            <li><a href="">Budget</a></li>
-                            <li><a href="">SOV</a></li>
-                            <li><a href="">PO</a></li>
-                            <li><a href="">RFI</a></li>
+                            <li><a href="budget.html">Budget</a></li>
+                            <li><a href="sov.html">SOV</a></li>
+                            <li><a href="po.html">PO</a></li>
+                            <li><a href="rfi.html">RFI</a></li>
                             <li><a href="">Change Order</a></li>
                             <li><a href="">Submittal</a></li>
                             <li><a href="">Document</a></li>
@@ -179,156 +180,107 @@
                 </nav>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-sm-4">
-                    <h2>Line Items</h2>
+                <div class="col-sm-12">
+                    <h2>Request For Information</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="index.html">Dashboard</a>
                         </li>
+                        <li class="breadcrumb-item">
+                            <a href="rfi.html">RFI Index</a>
+                        </li>
                         <li class="breadcrumb-item active">
-                            <strong>Line Items</strong>
+                            <strong>RFI Detail</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-sm-8">
-                    <div class="title-action">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_line_items">
-                            Add Line Items
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal inmodal fade" id="add_line_items" tabindex="-1" role="dialog"  aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-
-
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title">Add A line Items</h4>
-                            <small class="font-bold">For a Project.</small>
-                        </div>
-                        <form method="get">
-                            <div class="modal-body">
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Select Project</label>
-        
-                                    <div class="col-sm-10">
-                                        <select class="form-control m-b" name="account">
-                                            <option>option 1</option>
-                                            <option>option 2</option>
-                                            <option>option 3</option>
-                                            <option>option 4</option>
-                                        </select>
-        
-                                    </div>
-                                </div>
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Cost Code</label>    
-                                    <div class="col-sm-10"><input type="text" placeholder="Cost Code" class="form-control"></div>
-                                </div>
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Item Description</label>    
-                                    <div class="col-sm-10"><input type="text" placeholder="Item Description" class="form-control"></div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
 
             <div class="wrapper wrapper-content">
-
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-3">
                         <div class="ibox ">
-                            <div class="ibox-title">
-                                <h5>Line Items List</h5>
-                                <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
-                                    <a class="close-link">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="ibox-content">
-                                <div class="row">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Cost Code </th>
-                                                    <th>Item Description</th>                                                    
-                                                    <th>Quantity</th>
-                                                    <th>Unit</th>
-                                                    <th>Labor</th>                                                    
-                                                    <th>Material</th>
-                                                    <th>Equipement</th>                                                    
-                                                    <th>Budget </th>   
-                                                    <th>Project Name</th>                                                 
-                                                    <th>Action</th>                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>GC1</td>
-                                                    <td>Project Manager</td>                                                    
-                                                    <td>10</td>
-                                                    <td>Months</td>
-                                                    <td>$1,50,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$1,50,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td>
-                                                        <a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>GC2</td>
-                                                    <td>Project Supervision</td>                                                    
-                                                    <td>8</td>
-                                                    <td>Months</td>
-                                                    <td>$85,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$85,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td><a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>GC3</td>
-                                                    <td>Site Safety</td>                                                    
-                                                    <td>8</td>
-                                                    <td>Months</td>
-                                                    <td>$85,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$85,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td><a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>                                        
-                                            </tbody>
-                                        </table>
-                                    </div>
+                            <div class="ibox-content mailbox-content">
+                                <div class="file-manager">
+                                    <a class="btn btn-block btn-primary compose-mail" href="rfi_compose.html">Compose
+                                        RFI</a>
+                                    <div class="space-25"></div>
+                                    <h5>Folders</h5>
+                                    <ul class="folder-list m-b-md" style="padding: 0">
+                                        <li><a href="rfi.html"> <i class="fa fa-inbox "></i> Inbox</a></li>
+                                        <li><a href="rfi.html"> <i class="fa fa-trash-o"></i> Trash</a></li>
+                                    </ul>
+                                    <h5>Categories</h5>
+                                    <ul class="category-list" style="padding: 0">
+                                        <li><a href="#"> <i class="fa fa-circle text-navy"></i> Work </a></li>
+                                        <li><a href="#"> <i class="fa fa-circle text-danger"></i> Documents</a></li>
+                                        <li><a href="#"> <i class="fa fa-circle text-primary"></i> Social</a></li>
+                                        <li><a href="#"> <i class="fa fa-circle text-info"></i> Advertising</a></li>
+                                        <li><a href="#"> <i class="fa fa-circle text-warning"></i> Clients</a></li>
+                                    </ul>
+
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+                            <div class="float-right tooltip-demo">
+                                <a href="#" class="btn btn-white btn-sm"><i class="fa fa-print"></i> </a>
+                            </div>
+                            <h2>
+                                Request For Information Detail
+                            </h2>
+                            <div class="mail-tools tooltip-demo m-t-md">
+
+
+                                <h3>
+                                    <span class="font-normal">Subject: </span>Aldus PageMaker including versions of
+                                    Lorem Ipsum.
+                                </h3>
+                                <h5>
+                                    <span class="float-right font-normal">10:15AM 02 FEB 2014</span>
+                                    <span class="font-normal">From: </span>alex.smith@corporation.com
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="mail-box">
+
+
+                            <div class="mail-body">
+                                <p>
+
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer
+                                    took a galley of type and scrambled it to make a type <strong>specimen
+                                        book.</strong>It was popularised in the 1960s with the release of Letraset
+                                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                                    software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not
+                                    only five centuries, but also the leap into electronic typesetting, remaining
+                                    essentially unchanged.
+                                </p>
+                                <p>
+                                    It was popularised in the 1960s with the release <a href="#"
+                                        class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more
+                                    recently with desktop publishing software
+                                    like Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                                <p>
+                                    There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum
+                                    available, but the majority have suffered alteration in some form, by injected
+                                    humour, or randomised words which don't look even slightly believable. If you are
+                                    going to use a passage of.
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+
+
+                        </div>
+                    </div>
                 </div>
+
 
             </div>
 
@@ -384,7 +336,15 @@
 
     <!-- ChartJS-->
     <script src="js/plugins/chartJs/Chart.min.js"></script>
-
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
 
 </body>
 

@@ -16,6 +16,7 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 
 </head>
 
@@ -51,10 +52,10 @@
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="line_items.html">Create Line Items</a></li>
-                            <li><a href="">Budget</a></li>
-                            <li><a href="">SOV</a></li>
-                            <li><a href="">PO</a></li>
-                            <li><a href="">RFI</a></li>
+                            <li><a href="budget.html">Budget</a></li>
+                            <li><a href="sov.html">SOV</a></li>
+                            <li><a href="po.html">PO</a></li>
+                            <li><a href="rfi.html">RFI</a></li>
                             <li><a href="">Change Order</a></li>
                             <li><a href="">Submittal</a></li>
                             <li><a href="">Document</a></li>
@@ -179,156 +180,106 @@
                 </nav>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-sm-4">
-                    <h2>Line Items</h2>
+                <div class="col-sm-12">
+                    <h2>Request For Information</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="index.html">Dashboard</a>
                         </li>
+                        <li class="breadcrumb-item">
+                            <a href="rfi.html">RFI Index</a>
+                        </li>
                         <li class="breadcrumb-item active">
-                            <strong>Line Items</strong>
+                            <strong>Compose RFI</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-sm-8">
-                    <div class="title-action">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_line_items">
-                            Add Line Items
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal inmodal fade" id="add_line_items" tabindex="-1" role="dialog"  aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-
-
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title">Add A line Items</h4>
-                            <small class="font-bold">For a Project.</small>
-                        </div>
-                        <form method="get">
-                            <div class="modal-body">
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Select Project</label>
-        
-                                    <div class="col-sm-10">
-                                        <select class="form-control m-b" name="account">
-                                            <option>option 1</option>
-                                            <option>option 2</option>
-                                            <option>option 3</option>
-                                            <option>option 4</option>
-                                        </select>
-        
-                                    </div>
-                                </div>
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Cost Code</label>    
-                                    <div class="col-sm-10"><input type="text" placeholder="Cost Code" class="form-control"></div>
-                                </div>
-                                <div class="form-group row"><label class="col-sm-2 col-form-label">Item Description</label>    
-                                    <div class="col-sm-10"><input type="text" placeholder="Item Description" class="form-control"></div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
 
             <div class="wrapper wrapper-content">
-
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-3">
                         <div class="ibox ">
-                            <div class="ibox-title">
-                                <h5>Line Items List</h5>
-                                <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
-                                    <a class="close-link">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="ibox-content">
-                                <div class="row">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Cost Code </th>
-                                                    <th>Item Description</th>                                                    
-                                                    <th>Quantity</th>
-                                                    <th>Unit</th>
-                                                    <th>Labor</th>                                                    
-                                                    <th>Material</th>
-                                                    <th>Equipement</th>                                                    
-                                                    <th>Budget </th>   
-                                                    <th>Project Name</th>                                                 
-                                                    <th>Action</th>                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>GC1</td>
-                                                    <td>Project Manager</td>                                                    
-                                                    <td>10</td>
-                                                    <td>Months</td>
-                                                    <td>$1,50,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$1,50,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td>
-                                                        <a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>GC2</td>
-                                                    <td>Project Supervision</td>                                                    
-                                                    <td>8</td>
-                                                    <td>Months</td>
-                                                    <td>$85,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$85,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td><a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>GC3</td>
-                                                    <td>Site Safety</td>                                                    
-                                                    <td>8</td>
-                                                    <td>Months</td>
-                                                    <td>$85,000.00</td>
-                                                    <td> - </td>
-                                                    <td> - </td>
-                                                    <td>$85,000.00</td>
-                                                    <td>Project X</td>
-                                                    <td><a href="line_items_detail.html"><i
-                                                                class="fa fa-external-link text-navy"></i> Detail</a>
-                                                    </td>
-                                                </tr>                                        
-                                            </tbody>
-                                        </table>
-                                    </div>
+                            <div class="ibox-content mailbox-content">
+                                <div class="file-manager">
+                                    <a class="btn btn-block btn-primary compose-mail" href="rfi_compose.html">Compose
+                                        RFI</a>
+                                    <div class="space-25"></div>
+                                    <h5>Folders</h5>
+                                    <ul class="folder-list m-b-md" style="padding: 0">
+                                        <li><a href="rfi.html"> <i class="fa fa-inbox "></i> Inbox</a></li>
+                                        <li><a href="rfi.html"> <i class="fa fa-trash-o"></i> Trash</a></li>
+                                    </ul>
+                                    <h5>Categories</h5>
+                                    <ul class="category-list" style="padding: 0">
+                                        <li><a href="#"> <i class="fa fa-circle text-navy"></i> Work </a></li>
+                                        <li><a href="#"> <i class="fa fa-circle text-danger"></i> Documents</a></li>
+                                        <li><a href="#"> <i class="fa fa-circle text-primary"></i> Social</a></li>
+                                        <li><a href="#"> <i class="fa fa-circle text-info"></i> Advertising</a></li>
+                                        <li><a href="#"> <i class="fa fa-circle text-warning"></i> Clients</a></li>
+                                    </ul>
+
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+                            <div class="float-right tooltip-demo">
+                                <a href="mailbox.html" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Discard</a>
+                            </div>
+                            <h2>
+                                Compose And Send RFI
+                            </h2>
+                        </div>
+                        <div class="mail-box">
+
+
+                            <div class="mail-body">
+
+                                <form method="get">
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Select Project</label>
+        
+                                        <div class="col-sm-10">
+                                            <select class="form-control m-b" name="account">
+                                                <option>Project 1</option>
+                                                <option>Project 2</option>
+
+                                            </select>
+            
+                                        </div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">To:</label>
+
+                                        <div class="col-sm-10"><input type="text" class="form-control"
+                                                value="alex.smith@corporat.com"></div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Subject:</label>
+
+                                        <div class="col-sm-10"><input type="text" class="form-control" value=""></div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Detail:</label>
+
+                                        <div class="col-sm-10">
+                                            <textarea type="text" class="form-control" value=""></textarea>
+                                        
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <div class="mail-body text-right tooltip-demo">
+                                <a href="mailbox.html" class="btn btn-sm btn-primary"><i class="fa fa-reply"></i> Send</a>
+                                <a href="mailbox.html" class="btn btn-white btn-sm"><i class="fa fa-times"></i> Discard</a>
+                            </div>
+                            <div class="clearfix"></div>
+
+                        </div>
+                    </div>
                 </div>
+
 
             </div>
 
@@ -384,7 +335,15 @@
 
     <!-- ChartJS-->
     <script src="js/plugins/chartJs/Chart.min.js"></script>
-
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
 
 </body>
 
