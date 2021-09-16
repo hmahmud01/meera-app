@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MBCC | ERP Dashboard </title>
+    <title>Meera App | Dashboard</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     <!-- Morris -->
     <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
 
@@ -23,7 +23,7 @@
     <div id="wrapper">
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">                
-                <ul class="nav metismenu" id="side-menu">                    
+                <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -36,74 +36,53 @@
                         </div>
                     </li>
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span
+                                class="nav-label">Dashboards</span></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-edit"></i> <span class="nav-label">Projects</span><span
+                        <a href=""><i class="fa fa-cube"></i> <span class="nav-label">Products</span><span
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="project_create.html">Create Project</a></li>
-                            <li><a href="project_list.html">List Projects</a></li>
+                            <li><a href="product_create.html">Create</a></li>
+                            <li><a href="product_list.html">List</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-flask"></i> <span class="nav-label">Manage</span><span
+                        <a href=""><i class="fa fa-users"></i> <span class="nav-label">Users</span><span
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="line_items.html">Create Line Items</a></li>
-                            <li><a href="budget.html">Budget</a></li>
-                            <li><a href="sov.html">SOV</a></li>
-                            <li><a href="po.html">PO</a></li>
-                            <li><a href="rfi.html">RFI</a></li>
-                            <li><a href="">Change Order</a></li>
-                            <li><a href="">Submittal</a></li>
-                            <li><a href="">Document</a></li>
+                            <li><a href="users.html">List</a></li>                            
                         </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-file"></i> <span class="nav-label">Accounts Receivable</span><span
+                        <a href=""><i class="fa fa-usd"></i> <span class="nav-label">Orders</span><span
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="">Create Requisition</a></li>
-                            <li><a href="">Open Requisition</a></li>
+                            <li><a href="orders.html">List</a></li>                            
                         </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Accounts Payable</span><span
+                        <a href=""><i class="fa fa-cog"></i> <span class="nav-label">Settings</span><span
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="">Create Inv</a></li>
-                            <li><a href="">Open Inv</a></li>
+                            <li><a href="blank.html">Product Setting</a></li>                            
                         </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-credit-card"></i> <span class="nav-label">Payroll</span><span
+                        <a href=""><i class="fa fa-line-chart"></i> <span class="nav-label">Report</span><span
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="">Create</a></li>
-                            <li><a href="">Payroll History</a></li>
+                            <li><a href="blank.html">All Report</a></li>                            
                         </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-pie-chart"></i> <span class="nav-label">Reports</span><span
+                        <a href=""><i class="fa fa-tags"></i> <span class="nav-label">Iventory</span><span
                             class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="">Project Reports</a></li>
-                            <li><a href="">Company Reports</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa fa-globe"></i> <span class="nav-label">Administration</span><span
-                            class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="">Create User</a></li>
-                            <li><a href="">Manage user</a></li>
-                            <li><a href="employees.html">Employees</a></li>
-                            <li><a href="vendors.html">Vendors</a></li>
+                            <li><a href="inventory.html">Stock Check</a></li>                            
                         </ul>
                     </li>
                 </ul>
-
             </div>
         </nav>
 
@@ -122,50 +101,7 @@
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <span class="m-r-sm text-muted welcome-message">Welcome To MBCC ERP Dashboard</span>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-messages">
-                                <li>
-                                    <div class="dropdown-messages-box">
-                                        <a class="dropdown-item float-left" href="profile.html">
-                                            <img alt="image" class="rounded-circle" src="img/a7.jpg">
-                                        </a>
-                                        <div>
-                                            <small class="float-right">46h ago</small>
-                                            <strong>Mike Loreipsum</strong> started following <strong>Monica
-                                                Smith</strong>. <br>
-                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="dropdown-divider"></li>
-                                <li>
-                                    <div class="text-center link-block">
-                                        <a href="mailbox.html" class="dropdown-item">
-                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-alerts">
-                                <li>
-                                    <a href="mailbox.html" class="dropdown-item">
-                                        <div>
-                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                            <span class="float-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                            <span class="m-r-sm text-muted welcome-message">Welcome To Meera Application Backend</span>
                         </li>
 
 
@@ -179,23 +115,22 @@
                 </nav>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-sm-4">
-                    <h2>This is main title</h2>
+                <div class="col-sm-12">
+                    <h2>Blank Page</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="index.html">This is</a>
+                            <a href="index.html">Dashboard</a>
                         </li>
-                        
                         <li class="breadcrumb-item active">
-                            <strong>Breadcrumb</strong>
+                            <strong>Blank</strong>
                         </li>
                     </ol>
                 </div>
-                <div class="col-sm-8">
+                <!-- <div class="col-sm-8">
                     <div class="title-action">
                         <a href="" class="btn btn-primary">This is action area</a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="wrapper wrapper-content">
@@ -207,10 +142,10 @@
 
             <div class="footer">
                 <div class="float-right">
-                    <strong>ERP Dashbard</strong> Developed by Innsire
+                    <strong>ERP Dashbard</strong> Developed by hmahmud01
                 </div>
                 <div>
-                    <strong>Copyright</strong> MBCC &copy; 2021
+                    <strong>Copyright</strong> Meeraseed &copy; 2021
                 </div>
             </div>
 
@@ -253,10 +188,36 @@
 
     <!-- Sparkline demo data  -->
     <script src="js/demo/sparkline-demo.js"></script>
-
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
     <!-- ChartJS-->
     <script src="js/plugins/chartJs/Chart.min.js"></script>
 
+        <!-- iCheck -->
+        <script src="js/plugins/iCheck/icheck.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var mem = $('#data_1 .input-group.date').datepicker({
+                    todayBtn: "linked",
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    calendarWeeks: true,
+                    autoclose: true
+                });
+
+                var yearsAgo = new Date();
+                yearsAgo.setFullYear(yearsAgo.getFullYear() - 20);
+
+                $('#selector').datepicker('setDate', yearsAgo );
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+
+                
+            });
+        </script>
+        <!-- Data picker -->
+   
 
 </body>
 
